@@ -40,6 +40,7 @@ print("Testing if internet is working...")
 try:
     url = 'https://www.google.com'
     driver.get(url)
+    # Checking if Google's search bar has been loaded.
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CLASS_NAME, "gLFyf")))
     print("Login Successfull")
 except TimeoutException:
